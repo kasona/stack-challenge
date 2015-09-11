@@ -1,12 +1,19 @@
+var inputText = null;
+var historyText  = null;
+var newList = linkedListGenerator();
 
-function addNote() {
-  //getElementID
-  document.getElementID("input").value = document.getElementID("input").value;
+window.onload = function() {
 
-}
+  function addNote() {
+    //getElementID
+    document.getElementID('input').value = document.getElementID('input').value;
 
-function deleteNote() { // delete
-  // make a empty string
-  //removing node one by one
+  }
 
-}
+  function deleteNote() { // delete
+    // make a empty string
+    //removing node one by one
+
+  }
+
+};// end of window.onload
