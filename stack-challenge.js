@@ -4,6 +4,15 @@ Save button - Take input from 'Save!' and Add to head
 Delete button - Dump out all input they typed from recent to oldest
 
 */
+/**
+ * @name  linkedListGenerator
+ * @description  Main Module
+ * @return {Object} an object exposing methods to be used to manipulate a linked list
+ */
+
+//Refer back to foreclosure.js and vault.js
+// var eyes = require('eyes');
+
 function linkedListGenerator() {
   var head = null;
   var tail = null;
@@ -52,6 +61,10 @@ function linkedListGenerator() {
     return tail;
   }
 
+  function hasNext() {
+    return current !== null && (current.next !== null || current == tail);
+  }
+
   function remove(num) {
     var prev = get(num - 1); //store num-1 b/c link goes down, not up
     var current = get(num);
@@ -96,7 +109,7 @@ function linkedListGenerator() {
     return node;
   }
 
-  return {  //calling stuff out of function
+  return { //calling stuff out of function
     getHead : getHead,
     getTail : getTail,
     add : add,
